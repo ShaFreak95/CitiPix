@@ -189,30 +189,32 @@ let places = {
     austin: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/austin.jpg"
 }
 
+
+
 document.querySelector("#submit-btn").addEventListener("click", function() {
     // console.log(e.target.value)
-    // body.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/nyc.jpg"
-    // let place = e.target.value ;
 
     let userInput = document.querySelector("#city-type").value;
     userInput = userInput.trim()
 
-    if (userInput === "tokyo" || userInput === "Tokyo" || userInput === "TOKYO" ) {
-        document.querySelector("body").src = places.tokyo;
+    // console.log(userInput);
+
+    if (userInput == "tokyo" || userInput == "Tokyo" || userInput == "TOKYO" ) {
+        document.querySelector("body").style.backgroundImage = "url(" + places.tokyo + ")";
     }
-    else if (userInput === "sydney" || userInput === "Sydney" || userInput === "SYDNEY" ) {
-        document.querySelector("body").src = places.sydney;
+    else if (userInput == "sydney" || userInput == "Sydney" || userInput == "SYDNEY" ) {
+        document.querySelector("body").style.backgroundImage = "url(" + places.sydney + ")";
     }
-    else if (userInput === "new york" || userInput === "New York" || userInput === "NEWYORK" || userInput === "nyc" || userInput === "NYC" || userInput === "NY" ) {
-        document.querySelector("body").src = places.nyc;
+    else if (userInput == "new york" || userInput == "New York" || userInput == "NEWYORK" || userInput === "nyc" || userInput === "NYC" || userInput === "NY" ) {
+        document.querySelector("body").style.backgroundImage = "url(" + places.nyc + ")";
     }
     else if (userInput === "san francisco" || userInput === "San Francisco" || userInput === "SANFRANCISCO" || userInput === "sfc" || userInput === "sf" || userInput === "san fc" ) {
-        document.querySelector("body").src = places.sf;
+        document.querySelector("body").style.backgroundImage = "url(" + places.sf + ")";
     }
     else if (userInput === "los angeles" || userInput === "Los Angeles" || userInput === "LA" || userInput === "la" || userInput === "las" || userInput === "Las" ) {
-        document.querySelector("body").src = places.la;
+        document.querySelector("body").style.backgroundImage = "url(" + places.la + ")";
     }
     else if (userInput === "austin" || userInput === "Austin" || userInput === "AUSTIN") {
-        document.querySelector("body").src = places.austin;
+        document.querySelector("body").style.backgroundImage = "url(" + places.austin + ")";
     }
 })
